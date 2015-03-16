@@ -1,0 +1,39 @@
+
+.product-wrapper {
+    overflow: hidden;
+    position:absolute;                      
+    width: inherit;
+    height: 288px;
+    background: #fff;
+    margin: 0 auto;
+    margin-left: 38px;
+    margin-top: 271px;
+    margin-bottom: 240px;
+    background-color:rgba(0,0,0,0);
+
+}
+
+.bg-div {                         
+    width: 1300px;
+    height: 800px;
+    background-image: url("background.jpg"); 
+    background-size: cover; 
+}
+
+.product-carousel {
+    height: 2592px;
+    width: 100%;
+    position: relative; 
+    z-index: 10;
+}
+
+
+.test-content{
+    background-color:black; 
+    height:1000px;
+}
+
+
+
+
+
