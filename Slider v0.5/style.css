@@ -9,7 +9,7 @@ body{
     height: 236px;
     background: #fff;
     margin: 0 auto;
-    margin-top: 320px;
+    margin-top: 295px;
     margin-bottom: 240px;
     background-color:rgba(0,0,0,0);
 
@@ -17,17 +17,17 @@ body{
 
 .bg-div {                         
     width: 100%;
-    height: 1000px;
+    height: 100%;
     background-image: url("background.jpg"); 
     background-size: cover; 
-    position: relative;
+    position: fixed;
+
 }
 
 .product-carousel {
     height: 4012px;
     width: 100%;
     position: relative; 
-    z-index: 10;
 }
 
 
@@ -39,9 +39,10 @@ body{
 
 .arrow-down-img{
     display: block;
-    height:40px;
     margin: 0 auto;
-    
+    height:60px;
+   
+   
 }
 
 .logo-img{
@@ -53,13 +54,26 @@ body{
 }
 
 .arrow-down{
-   
-  height:40px;
-   width: 100%;
-   position: absolute;
-    bottom: 100px;
+   margin: auto;
+  left: 0;  
+  right: 0;
+  width: 80px;
+  height:60px;
+  text-align: center;;
+  position: absolute;
+  bottom: 150px;
+  display: block;
+  webkit-transition: bottom 0.2s;/* Safari */
+  transition: bottom 0.2s;
+}
+
+.arrow-down:hover{
+  
+    bottom: 120px;
   
 }
+
+.arrow-down{transition-timing-function: ease-out;}
 
 .logo{
 
@@ -69,5 +83,7 @@ body{
    
 
 }
+
+
 
 
