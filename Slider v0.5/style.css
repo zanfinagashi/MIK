@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.product-wrapper {
+    overflow: hidden;
+    position:absolute;                      
+    width: inherit;
+    height: 236px;
+    background: #fff;
+    margin: 0 auto;
+    margin-top: 320px;
+    margin-bottom: 240px;
+    background-color:rgba(0,0,0,0);
+
+}
+
+.bg-div {                         
+    width: 100%;
+    height: 1000px;
+    background-image: url("background.jpg"); 
+    background-size: cover; 
+    position: relative;
+}
+
+.product-carousel {
+    height: 4012px;
+    width: 100%;
+    position: relative; 
+    z-index: 10;
+}
+
+
+.test-content{
+    background-color:black; 
+    height:4000px;
+}
+
+
+.arrow-down-img{
+    display: block;
+    height:40px;
+    margin: 0 auto;
+    
+}
+
+.logo-img{
+    display: block;
+    top: 60px;
+    height:70px;
+    margin: 0 auto;
+
+}
+
+.arrow-down{
+   
+  height:40px;
+   width: 100%;
+   position: absolute;
+    bottom: 100px;
+  
+}
+
+.logo{
+
+   height:70px;
+   width: 100%;
+   margin-top: 60px;
+   
+
+}
+
+
