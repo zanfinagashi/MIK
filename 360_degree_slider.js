@@ -3,14 +3,7 @@
   element: document.getElementById('bg-div-id'),
   handler: function() {
 
-    $("#bg-div-id").css({
-
-      position: "fixed",
-    	top: "0px",   
-
-    });
- 
-
+   
 
     var lastScrollTop = 0, delta = 5, i=0;
     $(window).scroll(function(event){
@@ -23,29 +16,90 @@
        if (st > lastScrollTop){
            // downscroll code
            console.log('scroll down');
-           if(i>=0 && i<8)
-            i = i + 1;
+             if(i==16)
+               {
+                  i=0;
+               }
+
+           if(i>=0 && i<=12)
+           {  
+
+              i = i + 1;
+            console.log(i );
+            var time=70; 
+            var pos=[4,5,6];
+            var counter=0;
+           $.each(pos,function(){
+              
+                setTimeout(function(){
+                         if(counter==3){
+                          var counter=0;
+                           return;
+                         }
+                        counter++;
+                        console.log(counter + " counter" ) ;
+                        i++;
+                        console.log(i + "in loop plus " +  Math.floor(Date.now() / 1000) );
+                        $('.product-carousel').css('-webkit-transform','translateY(' + i*(-236) + 'px)');
+                        
+                }, time);
+                        
+                        time+=70;
+             
+                    });
+
+           //this line will be executed before the each loop
+            $('.product-carousel').css('-webkit-transform','translateY(' + (i)*(-236) + 'px)');
+
+           }
+            
+                  
        } else {
           // upscroll code
           console.log('scroll up');
-          if(i>0 && i<=8)
-            i = i - 1;
+         if(i==0)
+               {
+                  i=16;
+               }
 
+          if(i>=4 && i<=16)
+          {
+             i = i - 1;
+            console.log(i);
+          
+          var time=70; 
+          var pos=[4,5,6];
+           $.each(pos,function(){
+              var counter=0;
+                setTimeout(function(){
+                        
+                        if(counter==3)
+                          return;
+                        counter++
+                        i--;
+
+                        console.log(i + "in loop minus");
+                        $('.product-carousel').css('-webkit-transform','translateY(' + i*(-236) + 'px)');
+                        
+                }, time);
+                        
+                        time+=70;
+             
+                    });
+
+           //this line will be executed before the each loop
+            $('.product-carousel').css('-webkit-transform','translateY(' + (i)*(-236) + 'px)');
+          
+          }
+           
        }
 
-       $('.product-carousel').css('-webkit-transform','translateY(' + i*(-288) + 'px)');
-       lastScrollTop = st;
        
-       if(i==8)
-       {
-           $("#bg-div-id").css({
-
-        	   position: "relative",   
-
-   		       });
-
-       }
-
+                              
+       lastScrollTop = st; 
+      
     });
 }
 })
+
+  Date.now = function() { return new Date().getTime(); }
